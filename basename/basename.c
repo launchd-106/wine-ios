@@ -28,7 +28,6 @@
 # define basename gnu_basename
 #endif
 
-main()
 char *
 basename (filename)
      const char *filename;
