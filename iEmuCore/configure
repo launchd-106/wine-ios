@@ -1280,7 +1280,7 @@ EOF
       feature_not_found "sdl"
     fi
     sdl=no
-  fi # sdl compile test
+  #fi # sdl compile test
 fi
 
 if test "$sdl" = "yes" ; then
