@@ -1088,7 +1088,7 @@ feature_not_found() {
   echo "ERROR: User requested feature $feature"
   echo "ERROR: configure was not able to find it"
   echo "ERROR"
-  exit 1;
+  echo "Continuing on $cpu without $feature anyways. Expect Errrrrrrrors!"
 }
 
 if test -z "$cross_prefix" ; then
@@ -1280,7 +1280,7 @@ EOF
       feature_not_found "sdl"
     fi
     sdl=no
-  #fi # sdl compile test
+  fi # sdl compile test
 fi
 
 if test "$sdl" = "yes" ; then
