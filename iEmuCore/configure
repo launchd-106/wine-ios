@@ -1107,6 +1107,7 @@ if compile_prog "" "" ; then
 $TMPE && bigendian="yes"
 else
 echo big/little test failed
+echo continuing on $cpu anyways
 fi
 
 else
@@ -1170,7 +1171,7 @@ else
     echo "Error: zlib check failed"
     echo "Make sure to have the zlib libs and headers installed."
     echo
-    exit 1
+    echo "continuing on $cpu without zlib anyways!"
 fi
 
 ##########################################
