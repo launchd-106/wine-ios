@@ -8,4 +8,4 @@ gcc
 
 from radare cydia repo (http://cydia.radare.org/) OR the debs folder
 cacerts
-git 2.13
+git 2.13 (or 2.11 if 2.13 is giving you issues)
