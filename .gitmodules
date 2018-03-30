@@ -1,6 +1,6 @@
 [submodule "xserver"]
 	path = xserver
-	url = https://github.com/not0xFF/xserver.git
+	url = git://github.com/not0xFF/xserver.git
 [submodule "qemu"]
 	path = qemu
-	url = https://github.com/not0xFF/qemu.git
+	url = git://github.com/not0xFF/qemu.git
