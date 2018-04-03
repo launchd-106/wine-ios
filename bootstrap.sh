@@ -9,6 +9,8 @@ command -v autoconf >/dev/null 2>&1 || { echo >&2 "I require autoconf but it's n
 command -v autoreconf >/dev/null 2>&1 || { echo >&2 "I require autoreconf but it's not installed.  Aborting."; exit 1; }
 command -v aclocal >/dev/null 2>&1 || { echo >&2 "I require aclocal but it's not installed.  Aborting."; exit 1; }
 command -v m4 >/dev/null 2>&1 || { echo >&2 "I require m4 but it's not installed.  Aborting."; exit 1; }
+command -v awk >/dev/null 2>&1 || { echo >&2 "I require awk but it's not installed.  Aborting."; exit 1; }
+command -v gawk >/dev/null 2>&1 || { echo >&2 "I require gawk but it's not installed.  Aborting."; exit 1; }
 #using clang + gcc incase one breaks or the user likes one over the other
 command -v clang >/dev/null 2>&1 || { echo >&2 "I require clang but it's not installed.  Aborting."; exit 1; }
 command -v gcc >/dev/null 2>&1 || { echo >&2 "I require gcc but it's not installed.  Aborting."; exit 1; }
@@ -35,4 +37,10 @@ else
 fi
 echo "Found all files!"
 echo "%%% Building"
-#todo: build
+cd macros
+./autogen.sh
+make install
+cd ..
+cd xserver
+./autogen.sh
+aclocal --verbose -I /usr/local/share/aclocal
