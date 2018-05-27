@@ -33,7 +33,7 @@ if [ -z "$(ls -A macros)" ]; then
 	echo "macros wasn't pulled!"
 	exit 1;
 else
-	echo "found qemu!"
+	echo "found macros!"
 fi
 if [ -z "$(ls -A util)" ]; then
 	echo "fontutil wasn't pulled!"
